@@ -1,3 +1,6 @@
+# imports
+import itertools
+
 # cards and suited labels
 ranks = ['a', 'k', 'q', 'j', 't', '9', '8', '7', '6', '5', '4', '3', '2']
 
@@ -76,16 +79,20 @@ utg = [i for i in hj if i not in ('k8s', 't8s', '97s', '54s', 'ato', 'kjo', 'qjo
 
 def play_hand():
     global btn, co, hj, utg, sb
+    pos_list = ['sb', 'btn', 'co', 'hj', 'utg']
     range_dict = {'btn': btn, 'co': co, 'hj': hj, 'utg': utg, 'sb': sb}
-    seat_hand = input('seat & hand: ')
-    seat_hand = seat_hand.split()
-    if seat_hand[0] in range_dict:
-        print(seat_hand[1] in range_dict[seat_hand[0]])
-    else:
-        play_hand()
+    positions = itertools.cycle(range(len(pos_list)))
+    while True:
+        position = pos_list[next(positions)]
+        hand = input('{}: '.format(position).upper())
+        print(hand in range_dict[position])
 
-while True:
-    play_hand()
+play_hand()
+    
+    
+
+
+        
 
 
 
