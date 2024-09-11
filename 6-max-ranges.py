@@ -13,56 +13,57 @@ sb = []
 
 # btn pocket pairs
 for i in ranks:
-    btn.append(i+i)
+    sb.append(i+i)
     
 # suited hands
 for i in ranks[ranks.index('k'):]:
-    btn.append('a' + i + 's')
+    sb.append('a' + i + 's')
 
 for i in ranks[ranks.index('q'):]:
-    btn.append('k' + i + 's')
+    sb.append('k' + i + 's')
 
 for i in ranks[ranks.index('j'):]:
-    btn.append('q' + i + 's')
+    sb.append('q' + i + 's')
 
-for i in ranks[ranks.index('t'): ranks.index('3')]:
-    btn.append('j' + i + 's')
+for i in ranks[ranks.index('t'): ranks.index('2')]:
+    sb.append('j' + i + 's')
 
-for i in ranks[ranks.index('9'): ranks.index('5')]:
-    btn.append('t' + i + 's')
+for i in ranks[ranks.index('9'): ranks.index('4')]:
+    sb.append('t' + i + 's')
 
-for i in ranks[ranks.index('8'): ranks.index('5')]:
-    btn.append('9' + i + 's')
+for i in ranks[ranks.index('8'): ranks.index('4')]:
+    sb.append('9' + i + 's')
 
-for i in ranks[ranks.index('7'): ranks.index('5')]:
-    btn.append('8' + i + 's')
+for i in ranks[ranks.index('7'): ranks.index('4')]:
+    sb.append('8' + i + 's')
 
-for i in ranks[ranks.index('6'): ranks.index('4')]:
-    btn.append('7' + i + 's')
+for i in ranks[ranks.index('6'): ranks.index('3')]:
+    sb.append('7' + i + 's')
+
+for i in ranks[ranks.index('5'): ranks.index('3')]:
+    sb.append('6' + i + s)
+
+for i in ranks[ranks.index('4'): ranks.index('2')]:
+    sb.append('5' + i + s)
 
 # unsuited
 for i in ranks[ranks.index('k'): ranks.index('2')]:
-    btn.append('a' + i + 'o')
+    sb.append('a' + i + 'o')
 
 for i in ranks[ranks.index('q'): ranks.index('7')]:
-    btn.append('k' + i + 'o')
+    sb.append('k' + i + 'o')
 
 for i in ranks[ranks.index('j'): ranks.index('8')]:
-    btn.append('q' + i + 'o')
+    sb.append('q' + i + 'o')
 
 for i in ranks[ranks.index('t'): ranks.index('8')]:
-    btn.append('j' + i + 'o')
+    sb.append('j' + i + 'o')
 
 for i in ranks[ranks.index('9'): ranks.index('7')]:
-    btn.append('t' + i + 'o')
-
-# singles
-singles = [ '65s', '54s']
-for i in singles:
-    btn.append(i)
+    sb.append('t' + i + 'o')
 
 # sb
-sb = list(btn)
+btn = [i for i in sb if i not in ('j3s', 't5s', '95s', '85s', '74s', '64s', '53s', 'k7o', 'q80', 'j8o')]
 
 # co
 co = [i for i in btn if i not in ('33', '22', 'q4s', 'q3s', 'q2s', 'j6s', 'j5s', 'j4s', 't7s', 't6s', '96s', '86s', 
@@ -82,7 +83,12 @@ def play_hand():
     while True:
         position = pos_list[next(positions)]
         hand = input('{}: '.format(position).upper())
-        print(hand in range_dict[position])
+        hand = hand.split()
+        if len(hand) == 1:
+            print(hand[0] in range_dict[position])
+        elif len(hand) == 2:
+
+        
 
 play_hand()
 
