@@ -232,9 +232,6 @@ def play_hand():
                     else:
                         print('fold')
                 
-
-
-
 play_hand()
 
     
