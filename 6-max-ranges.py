@@ -170,7 +170,70 @@ def play_hand():
         hand = hand.split()
         if len(hand) == 1:
             print(hand[0] in range_dict[position])
-        #elif len(hand) == 2:
+        elif len(hand) == 2:
+            if hand[0] == 'utg':
+                if position == 'hj':
+                    print(hand[1] in hj_vs_utg)
+                elif position == 'co':
+                    print(hand[1] in co_vs_utg)
+                elif position == 'btn':
+                    print(hand[1] in btn_vs_utg)
+                elif position == 'sb':
+                    print(hand[1] in sb_vs_utg)
+                elif position == 'bb':
+                    if hand[1] in bb_vs_utg_raise:
+                        print('raise')
+                    elif hand[1] in bb_vs_utg_call:
+                        print('call')
+                    else:
+                        print('fold')
+            elif hand[0] == 'hj':
+                if position == 'co':
+                    print(hand[1] in co_vs_hj)
+                elif position == 'btn':
+                    print(hand[1] in btn_vs_hj)
+                elif position == 'sb':
+                    print(hand[1] in sb_vs_hj)
+                elif position == 'bb':
+                    if hand[1] in bb_raise_vs_hj:
+                        print('raise')
+                    elif hand[1] in bb_call_vs_hj:
+                        print('call')
+                    else:
+                        print('false')
+            elif hand[0] == 'co':
+                if position == 'btn':
+                    print(hand[1] in btn_vs_co)
+                elif position == 'sb':
+                    print(hand[1] in sb_vs_co)
+                elif position =='bb':
+                    if hand[1] in bb_raise_vs_co:
+                        print('raise')
+                    elif hand[1] in bb_call_vs_co:
+                        print('call')
+                    else:
+                        print('fold')
+            elif hand[0] == 'btn':
+                if position == 'sb':
+                    print(hand[1] in sb_vs_btn)
+                elif position == 'bb':
+                    if hand[1] in bb_raise_vs_btn:
+                        print('raise')
+                    elif hand[1] in bb_call_vs_btn:
+                        print('call')
+                    else:
+                        print('fold')
+            elif hand[0] == 'sb':
+                if position == 'bb':
+                    if hand[1] in bb_raise_vs_sb:
+                        print('raise')
+                    elif hand[1] in bb_call_vs_sb:
+                        print('call')
+                    else:
+                        print('fold')
+                
+
+
 
 play_hand()
 
