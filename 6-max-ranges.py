@@ -77,7 +77,8 @@ hj = [i for i in co if i not in ('44', 'k4s', 'k3s', 'k2s', 'q7s', 'q6s', 'q5s',
 utg = [i for i in hj if i not in ('k8s', 'a2s', 'q8s', 't8s', '98s', 'a9o', 'kto', 'qjo')]
 
 
-# 3-bet ranges
+### 3-bet ranges ###
+
 # utg raise
 hj_vs_utg = ['aa', 'kk', 'qq', 'jj', 'tt', 'aks', 'aqs', 'ajs', 'ats', 'kqs', 'kjs', 'kts',
              'qjs', 'a5s', 'a4s', 'aqo']
@@ -132,7 +133,7 @@ bb_call_vs_co = ['tt', '99', '88', '77', '66', '55', '44', '33', '22', 'ajs', 'a
                  '65s', '64s', '54s', '53s', '43s', '42s', 'aqo', 'ajo', 'ato', 'a9o', 'kqo',
                  'kto', 'qjo', 'qto', 'jto']
 
-#btn raise
+# btn raise
 sb_vs_btn = ['aa', 'kk', 'qq', 'jj', 'tt', '99', '88', '77', 'aks', 'aqs', 'ajs', 'ats', 'a9s', 'a8s',
              'a7s', 'a5s', 'a4s', 'kqs', 'kjs', 'kts', 'k9s', 'qjs', 'qts', 'q9s', 'jts', 't9s', 'ako', 
              'aqo', 'ajo', 'ato', 'kqo', 'kjo']
@@ -146,7 +147,7 @@ bb_call_vs_btn = ['99', '88', '77', '66', '55', '44', '33', '22', 'ats', 'a9s', 
                   'j4s', 't8s', 't7s', 't6s', '98s', '97s', '96s', '87s', '86s', '85s', '76s', '75s', '74s',
                   '65s', '64s', '63s', '54s', '53s', '43s', 'aqo', 'ajo', 'ato', 'a9o']
 
-#sb raise
+# sb raise
 bb_raise_vs_sb = ['aa', 'kk', 'qq', 'jj', 'tt', '99', 'a5s', 'a4s', 'kqs', 'kjs', 'qjs', 'jts', 'j2s',
                   't9s', 't5s', 't3s', 't2s', '98s', '87s', '76s', '65s', '54s', 'ako', 'aqo', 'a6o'
                   'a3s', 'a2s', 'k7o', 'j8o']
