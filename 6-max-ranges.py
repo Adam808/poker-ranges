@@ -10,6 +10,7 @@ co = []
 hj = []
 utg = []
 sb = []
+bb = []
 
 # sb pocket pairs
 for i in ranks:
@@ -75,8 +76,8 @@ hj = [i for i in co if i not in ('44', 'k4s', 'k3s', 'k2s', 'q7s', 'q6s', 'q5s',
 # utg
 utg = [i for i in hj if i not in ('k8s', 'a2s', 'q8s', 't8s', '98s', 'a9o', 'kto', 'qjo')]
 
-# 3-bet ranges
 
+# 3-bet ranges
 # utg raise
 hj_vs_utg = ['aa', 'kk', 'qq', 'jj', 'tt', 'aks', 'aqs', 'ajs', 'ats', 'kqs', 'kjs', 'kts',
              'qjs', 'a5s', 'a4s', 'aqo']
@@ -160,9 +161,9 @@ bb_call_vs_sb = ['88', '77', '66', '55', '44', '33', '22', 'ats', 'a9s', 'a8s', 
 
 
 def play_hand():
-    global btn, co, hj, utg, sb
-    pos_list = ['sb', 'btn', 'co', 'hj', 'utg']
-    range_dict = {'btn': btn, 'co': co, 'hj': hj, 'utg': utg, 'sb': sb}
+    global btn, co, hj, utg, sb, bb
+    pos_list = ['sb', 'btn', 'co', 'hj', 'utg', 'bb']
+    range_dict = {'btn': btn, 'co': co, 'hj': hj, 'utg': utg, 'sb': sb, 'bb': bb}
     positions = itertools.cycle(range(len(pos_list)))
     while True:
         position = pos_list[next(positions)]
