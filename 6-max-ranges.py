@@ -201,7 +201,7 @@ def play_hand():
                     elif hand[1] in bb_call_vs_hj:
                         print('call')
                     else:
-                        print('false')
+                        print('fold')
             elif hand[0] == 'co':
                 if position == 'btn':
                     print(hand[1] in btn_vs_co)
