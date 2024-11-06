@@ -64,11 +64,11 @@ for i in ranks[ranks.index('9'): ranks.index('7')]:
     sb.append('t' + i + 'o')
 
 # btn
-btn = [i for i in sb if i not in ('j3s', 't5s', '95s', '85s', '74s', '64s', '53s', 'k7o', 'q80', 'j8o')]
+btn = [i for i in sb if i not in ('j3s', 't5s', '95s', '85s', '74s', '64s', '53s', 'k7o', 'q8o', 'j8o')]
 
 # co
 co = [i for i in btn if i not in ('33', '22', 'q4s', 'q3s', 'q2s', 'j6s', 'j5s', 'j4s', 't7s', 't6s', '96s', '86s', 
-                                  'a7o', 'a60', 'a4o', 'a3o', 'a2o', 'k9o', 'k8o', 'q9o', 'j9o', 't9o', 't8o')]
+                                  'a7o', 'a6o', 'a4o', 'a3o', 'a2o', 'k9o', 'k8o', 'q9o', 'j9o', 't9o', 't8o')]
 
 # hj
 hj = [i for i in co if i not in ('44', 'k4s', 'k3s', 'k2s', 'q7s', 'q6s', 'q5s', 'j8s', 'j7s', '97s', '87s', 'a8o', 'qto', 'jto', 'a5o')]
