@@ -81,7 +81,7 @@ utg = [i for i in hj if i not in ('k8s', 'a2s', 'q8s', 't8s', '98s', 'a9o', 'kto
 
 # utg raise
 hj_vs_utg = ['aa', 'kk', 'qq', 'jj', 'tt', 'aks', 'aqs', 'ajs', 'ats', 'kqs', 'kjs', 'kts',
-             'qjs', 'a5s', 'a4s', 'aqo']
+             'a5s', 'a4s', 'aqo']
 
 co_vs_utg = ['aa', 'kk', 'qq', 'jj', 'tt', 'aks', 'aqs', 'ajs', 'ats', 'kqs', 'kjs', 'kts',
              'qjs', 'a5s', 'a4s', 'aqo', 'kqo']
